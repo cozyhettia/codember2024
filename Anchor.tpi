@@ -1,0 +1,71 @@
+<!-- Ir a Visualización - Plantillas - General: buscar index_body y reemplazar por el siguiente contenido -->
+{JAVASCRIPT}
+<!-- BEGIN switch_user_logged_in --><p class="right rightside">{LAST_VISIT_DATE}</p><!-- END switch_user_logged_in -->
+<p>{CURRENT_TIME}</p>
+{CAT_NAME}
+<br class="clear" />
+
+<!-- BEGIN message_admin_index -->
+	<div class="panel introduction">
+		<div class="inner"><span class="corners-top"><span></span></span>
+	<!-- BEGIN message_admin_titre -->
+		<div class="h3">{message_admin_index.message_admin_titre.MES_TITRE}</div>
+	<!-- END message_admin_titre -->
+
+	<!-- BEGIN message_admin_txt -->
+		<div class="mes-txt">{message_admin_index.message_admin_txt.MES_TXT}</div>
+	<!-- END message_admin_txt -->
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END message_admin_index -->
+
+{CHATBOX_TOP}
+{BOARD_INDEX}
+
+<!-- BEGIN disable_viewonline -->
+<div class="stats">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#0099ff" fill-opacity="1" d="M0,128L40,122.7C80,117,160,107,240,138.7C320,171,400,245,480,250.7C560,256,640,192,720,160C800,128,880,128,960,106.7C1040,85,1120,43,1200,48C1280,53,1360,107,1400,133.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+  </svg>
+  
+  <div class="stats-section">
+    <div class="stats-current">
+      <div class="stats-online">
+        <h4 class="stats-record">{TOTAL_USERS_ONLINE}</h4>
+        <span>{LOGGED_IN_USER_LIST}</span>
+      </div>
+      
+      <div class="stats-links">
+        <a href="{U_SEARCH_UNANSWERED}" title="{L_SEARCH_UNANSWERED}"><i class="fi fi-sr-comment-slash"></i></a>
+        <a href="{U_MARK_READ}" accesskey="m" title="{L_MARK_FORUMS_READ}"><i class="fi fi-sr-arrows-to-eye"></i></a>
+        <a href="/search?search_id=activetopics" title="Temas activos del día" class=""><i class="fi fi-sr-night-day"></i></a>
+        <a href="/memberlist?mode=today_posters" title="Top 20 posteadores hoy"><i class="fi fi-sr-calendar-day"></i></a>
+        <a href="/memberlist?mode=overall_posters" title="Top 20 posteadores del foro"><i class="fi fi-sr-chart-pie"></i></a>
+      </div>
+    </div>
+    
+    <!-- BEGIN switch_group_legend -->
+    <div class="stats-legend">{GROUP_LEGEND}</div>
+    <!-- END switch_group_legend -->
+    
+    <div class="stats-today">
+      <h4></h4>
+      <span>{L_CONNECTED_MEMBERS}</span>
+    </div>
+  </div>
+  
+  <div class="stats-header">
+    <span class="stats-posts">{TOTAL_POSTS}</span>
+    <span class="stats-members">{TOTAL_USERS}</span>
+    <span class="stats-since">Activos desde<strong>Noviembre 2024</strong></span>
+    <span class="stats-newest">{NEWEST_USER}</span>
+  </div>
+  
+  <div class="stats-quote"></div>
+</div>
+<!-- END disable_viewonline -->
+
+<br style="clear:both" />
+
+
+{AUTO_DST}
